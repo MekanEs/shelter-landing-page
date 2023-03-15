@@ -1,0 +1,74 @@
+
+.our_friends{
+    background-color: #F6F6F6;
+  }
+  .our_friends_content{
+    @extend %flex_column;
+    align-items: center;
+    justify-content: space-around;
+    row-gap: 60px;
+    padding-top: 80px;
+    padding-bottom: 99px;
+  }
+  .friends_h_txt{
+    @extend %headers;
+   width:35%;
+    text-align: center;
+
+    margin-left: 2px;;
+    white-space: pre-line;
+ 
+  }
+  .pet_slider{
+    @extend %flex_between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .prev_arrow{
+@include slider_buttons(0deg);
+  }
+  .next_arrow{
+    @include slider_buttons(180deg);
+  }
+  .slider_cards{
+    @extend %flex_between;
+    column-gap: 90px;
+ 
+  }
+  .pets_slider_card{
+    @extend %flex_column;
+    align-items: center;
+    width: fit-content;
+    background-color:#fff;
+    border-radius: 15px;
+    justify-content: space-between;
+    row-gap:30px;
+    color:#545454;
+  }
+  .slider_petName{
+    font-family: $font-Georgia;
+
+font-size: 20px;
+letter-spacing: 0.06em;
+margin-left: 2px;
+  }
+  .slider_learrnMoreBtn{
+   @include std_btn;
+  
+   border: 2px solid #F1CDB3;
+   padding: 13px 43px;
+   background-color: #fff;
+   margin-left: 2px;
+   margin-bottom: 31px;
+   color: #545454;
+  }
+  .get_rest{
+    @include std_btn;
+margin-left: 2px;
+    border: none;
+    background-color: $pink_color;
+
+   color:#292929;
+
+  }

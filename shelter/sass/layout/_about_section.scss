@@ -1,0 +1,31 @@
+.about_content{
+    @extend %flex_between;
+    column-gap: 120px;
+    margin-top: 80px;
+    margin-bottom: 97px;
+    .about_img{
+      margin-left: 175px;
+    }
+    .about_txt{
+  margin-right: 40px;
+  margin-top: 15px;
+  @extend %flex_column;
+  
+    }
+  }
+  .about_h_txt{
+  @extend %headers;
+  width: 60%;
+  margin-bottom: 25px;
+  }
+  
+  .about_p1_txt , .about_p2_txt{
+  width: 75%;
+  line-height: 24px;
+  font-size: 15px;
+  font-family: $font-Arial;
+  }
+  .about_p1_txt {
+    margin-bottom: 25px;
+  }
+  
