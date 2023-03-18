@@ -28,4 +28,29 @@
   .about_p1_txt {
     margin-bottom: 25px;
   }
-  
+  @media(max-width:1000px){
+    .about_content{
+      margin-top: 65px;
+      flex-direction: column-reverse;
+      align-items: center;
+    .about_txt{
+   
+     padding: 0 105px 0 140px;
+     
+    }   }
+    .about_h_txt{
+    
+ 
+      width: 80%;
+      margin-bottom: 25px;
+      }
+      .about_p1_txt , .about_p2_txt{
+      width: 100%;
+      }
+      .about_p2_txt {
+        margin-bottom: 80px;
+      }
+      .about_content .about_img{
+        margin-left:0;
+      }
+  }

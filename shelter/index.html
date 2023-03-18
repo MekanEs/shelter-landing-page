@@ -3,31 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sass/style.css">
     <link rel="icon" type="image/x-icon" href="./assets/icon.png">
     <title>Shelter</title>
 </head>
 <body>
-    
+    <div class="head_wrapper">
+    <header class="header">
+
+        <div class="logo"><a>
+            <h1 class="logo_up">Cozy House</h1>
+            <div class="logo_down">Shelter for pets in Boston</div></a>
+        </div>
+        
+        <div class="navigation_bar">
+            <div class="nav_item"><a>About the shelter</a></div>
+            <div class="nav_item"><a>Our pets</a></div>
+            <div class="nav_item"><a>Help the shelter</a></div>
+            <div class="nav_item"><a>Contacts</a></div>
+        </div>
+                        </header></div>
     <section class="not_only">
         <div class="wrapper">
             <div class="start_content">
-                <header class="header">
-
-<div class="logo"><a>
-    <h1 class="logo_up">Cozy House</h1>
-    <div class="logo_down">Shelter for pets in Boston</div></a>
-</div>
-
-<div class="navigation_bar">
-    <div class="nav_item"><a>About the shelter</a></div>
-    <div class="nav_item"><a>Our pets</a></div>
-    <div class="nav_item"><a>Help the shelter</a></div>
-    <div class="nav_item"><a>Contacts</a></div>
-</div>
-                </header>
+        
                
                 <div class="start_text_img">
 <div class="txt_content">
@@ -60,10 +61,31 @@
     <section class="our_friends">
         <div class="wrapper">
 <div class="our_friends_content">
-    <div class="friends_h_txt">Our friends who
+    <div class="friends_h_txt">Our friends who 
         are looking for a house</div>
-    <div class="pet_slider"></div>
-    <button class="our_friends_button"></button>
+    <div class="pet_slider">
+        <button class="prev_arrow"><img src="assets/Arrow.png" alt="previous"></button>
+        <div class="slider_cards">
+<div class="pets_slider_card">
+    <img src="assets/pets_images/pets/katrine.png">
+<div class="slider_petName">Katrine</div>
+<button class="slider_learrnMoreBtn">Learn more</button>
+</div>
+<div class="pets_slider_card">
+    <img src="assets/pets_images/pets/jennifer.png">
+    <div class="slider_petName">Jennifer</div>
+    <button class="slider_learrnMoreBtn">Learn more</button>
+</div>
+<div class="pets_slider_card">
+    <img src="assets/pets_images/pets/woody.png">
+    <div class="slider_petName">Woody</div>
+    <button class="slider_learrnMoreBtn">Learn more</button>
+</div>
+        </div>
+        <button class="next_arrow"><img src="assets/Arrow.png" alt="next"></button>
+    </div>
+    <button class="get_rest">Get to know the rest</button>
+  
 </div>
 
         </div></section>

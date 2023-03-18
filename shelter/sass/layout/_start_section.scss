@@ -12,14 +12,14 @@
   }
   .header{
     @extend %flex_between;
-    @extend %wrapper_of_section;
+   @include wrapper_of_section;
     
 
    width: 100%;
    margin: 60px auto;
     }
   .wrapper{
-  @extend %wrapper_of_section
+    @include wrapper_of_section;
   }
   
   .logo{
@@ -84,6 +84,7 @@ line-height: 35.2px;
       font-size: 17px;
       background-color: $pink_color;
       border: none;
+      cursor: pointer;
     }
   }
   .start_img{
@@ -92,4 +93,52 @@ line-height: 35.2px;
       display: block;
     }
   }
-  
+  @media(max-width: 1000px){
+ 
+    .header{
+ @include wrapper_of_section_tablet;
+     width: 100%;
+     margin: 60px auto;
+      }
+    .wrapper{
+      @include wrapper_of_section_tablet;
+    }
+    .start_text_img{
+      flex-direction: column;
+      margin-top: 180px;
+    }
+    .header {
+      max-width: 768px;
+      padding: 0 30px;
+      margin: 30px auto;
+  }
+  .start_text_img {
+    margin-top: 0px;
+    display: flex;
+  align-items: center;
+}
+.txt_content {
+    margin-top: 150px;
+   width: 65%;
+   display: flex;
+   align-items: center;
+   text-align: left;
+  h2{
+    align-self: baseline;
+  }
+  div{
+    width: 100%;
+  }
+}
+.start_img{
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  img {
+    display: block;
+  margin-top: 100px;
+  width: 569px
+  }
+}
+
+  }
