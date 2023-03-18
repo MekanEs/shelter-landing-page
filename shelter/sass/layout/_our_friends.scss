@@ -12,9 +12,9 @@
   }
   .friends_h_txt{
     @extend %headers;
-   width:35%;
-    text-align: center;
 
+    text-align: center;
+padding: 0 50px 0 50px;
     margin-left: 2px;;
     white-space: pre-line;
  
@@ -23,6 +23,7 @@
     @extend %flex_between;
     align-items: center;
     width: 100%;
+    column-gap: 55px;
   }
 
   .prev_arrow{
@@ -34,7 +35,7 @@
   .slider_cards{
     @extend %flex_between;
     column-gap: 90px;
- 
+ overflow: hidden;
   }
   .pets_slider_card{
     @extend %flex_column;
@@ -51,7 +52,7 @@
 
 font-size: 20px;
 letter-spacing: 0.06em;
-margin-left: 2px;
+
   }
   .slider_learrnMoreBtn{
    @include std_btn;
@@ -71,4 +72,22 @@ margin-left: 2px;
 
    color:#292929;
 
+  }
+
+  @media (max-width:1000px) {
+    .friends_h_txt{
+  padding: 0 20px 0 20px;
+
+
+
+      white-space: pre-line;
+
+    }
+    .pet_slider {
+      column-gap: 14px;
+    }
+    .slider_cards {
+      column-gap: 40px;
+
+    }
   }
