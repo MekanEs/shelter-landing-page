@@ -60,13 +60,14 @@ letter-spacing: 0.06em;
    border: 2px solid #F1CDB3;
    padding: 13px 43px;
    background-color: #fff;
-   margin-left: 2px;
-   margin-bottom: 31px;
+   //margin-left: 2px;
+   margin-bottom: 30px;
    color: #545454;
   }
   .get_rest{
     @include std_btn;
-margin-left: 2px;
+margin-left: 1px;
+
     border: none;
     background-color: $pink_color;
 
@@ -84,7 +85,7 @@ margin-left: 2px;
 
     }
     .pet_slider {
-      column-gap: 14px;
+      column-gap: 12px;
     }
     .slider_cards {
       column-gap: 40px;

@@ -1,0 +1,51 @@
+.Donation{
+    background: #F6F6F6;
+}
+
+.Donation_content{
+    @extend %flex_between;
+    padding: 90px 160px 0 142px;
+    column-gap: 32px;
+
+}
+.donation_content{
+    @extend %flex_column;
+    
+    h2{
+        @extend %headers;
+        white-space: break-spaces;
+        line-height: 23px;
+margin-bottom: 30px;
+    
+    }
+    .h{
+        
+        font-size: 15px;
+        letter-spacing: 0.1em;
+        margin-bottom: 20px;
+    }
+}
+.card_input_container{
+   
+    border: none;
+border-radius: 10px;
+    background-color: $pink_color;
+    display: flex;
+    padding: 0 15px;
+    margin-right: 12px;
+    column-gap: 16px;
+}
+.card_input{
+  background-color: transparent;
+    background-image: url('../../assets/credit-card.svg');
+    background-repeat: no-repeat;
+    line-height: 40px;
+    border: none;
+width: 100%;
+    font-family: 'Georgia';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 42px;
+letter-spacing: 0.06em;
+}

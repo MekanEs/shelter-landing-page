@@ -1,0 +1,50 @@
+.how-to_help{
+    @extend %flex_column;
+    align-items: center;
+    margin-top: 80px;
+    padding: 0 85px 100px 85px;
+    div h2{
+        @extend %headers;
+        white-space: break-spaces;
+    }
+    .how_icons_container{
+        font-family: $font-Georgia;
+     display: flex;
+     justify-content: center;
+        flex-wrap: wrap;
+      margin-top: 60px;
+      row-gap: 55px;
+      column-gap: 120px;
+    }
+    .icon_card{
+        @extend %flex_column;
+        align-items: center;
+        row-gap: 20px;
+    
+        img{
+width: 60px;
+        }
+        div{
+            color: #545454;
+            @extend %headers;
+            font-size: 20px;
+            line-height: 23px;
+            margin-top: 10px;
+            letter-spacing: 0.06em;
+            text-align: center;
+        }
+    }
+}
+@media (max-width:1000px){
+    .how-to_help{
+        padding: 0 30px;
+        .how_icons_container{
+           
+             row-gap: 55px;
+             column-gap: 60px;
+           }
+        .icon_card{
+width: 170px;
+        }
+    }
+}

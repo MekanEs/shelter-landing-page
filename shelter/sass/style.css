@@ -1,14 +1,14 @@
-.pets_slider_card, .our_friends_content, .about_content .about_txt, .txt_content, .logo, .start_content {
+.donation_content, .how-to_help .icon_card, .how-to_help, .pets_slider_card, .our_friends_content, .about_content .about_txt, .txt_content, .logo, .start_content {
   display: flex;
   flex-direction: column;
 }
 
-.slider_cards, .next_arrow, .prev_arrow, .pet_slider, .about_content, .start_text_img, .navigation_bar, .header {
+.Donation_content, .slider_cards, .next_arrow, .prev_arrow, .pet_slider, .about_content, .start_text_img, .navigation_bar, .header {
   display: flex;
   justify-content: space-between;
 }
 
-.friends_h_txt, .about_h_txt {
+.donation_content h2, .how-to_help .icon_card div, .how-to_help div h2, .friends_h_txt, .about_h_txt {
   font-family: "Georgia", normal;
   font-size: 35px;
   font-weight: 400;
@@ -447,8 +447,7 @@ button {
   border: 2px solid #F1CDB3;
   padding: 13px 43px;
   background-color: #fff;
-  margin-left: 2px;
-  margin-bottom: 31px;
+  margin-bottom: 30px;
   color: #545454;
 }
 
@@ -461,7 +460,7 @@ button {
   width: fit-content;
   border-radius: 100px;
   letter-spacing: 0.06em;
-  margin-left: 2px;
+  margin-left: 1px;
   border: none;
   background-color: #F1CDB3;
   color: #292929;
@@ -473,11 +472,100 @@ button {
     white-space: pre-line;
   }
   .pet_slider {
-    column-gap: 14px;
+    column-gap: 12px;
   }
   .slider_cards {
     column-gap: 40px;
   }
+}
+.how-to_help {
+  align-items: center;
+  margin-top: 80px;
+  padding: 0 85px 100px 85px;
+}
+.how-to_help div h2 {
+  white-space: break-spaces;
+}
+.how-to_help .how_icons_container {
+  font-family: "Georgia", normal;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 60px;
+  row-gap: 55px;
+  column-gap: 120px;
+}
+.how-to_help .icon_card {
+  align-items: center;
+  row-gap: 20px;
+}
+.how-to_help .icon_card img {
+  width: 60px;
+}
+.how-to_help .icon_card div {
+  color: #545454;
+  font-size: 20px;
+  line-height: 23px;
+  margin-top: 10px;
+  letter-spacing: 0.06em;
+  text-align: center;
+}
+
+@media (max-width: 1000px) {
+  .how-to_help {
+    padding: 0 30px;
+  }
+  .how-to_help .how_icons_container {
+    row-gap: 55px;
+    column-gap: 60px;
+  }
+  .how-to_help .icon_card {
+    width: 170px;
+  }
+}
+.Donation {
+  background: #F6F6F6;
+}
+
+.Donation_content {
+  padding: 90px 160px 0 142px;
+  column-gap: 32px;
+}
+
+.donation_content h2 {
+  white-space: break-spaces;
+  line-height: 23px;
+  margin-bottom: 30px;
+}
+.donation_content .h {
+  font-size: 15px;
+  letter-spacing: 0.1em;
+  margin-bottom: 20px;
+}
+
+.card_input_container {
+  border: none;
+  border-radius: 10px;
+  background-color: #F1CDB3;
+  display: flex;
+  padding: 0 15px;
+  margin-right: 12px;
+  column-gap: 16px;
+}
+
+.card_input {
+  background-color: transparent;
+  background-image: url("../../assets/credit-card.svg");
+  background-repeat: no-repeat;
+  line-height: 40px;
+  border: none;
+  width: 100%;
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 42px;
+  letter-spacing: 0.06em;
 }
 
 /*# sourceMappingURL=style.css.map */
