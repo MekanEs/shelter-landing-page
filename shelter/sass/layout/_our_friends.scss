@@ -32,11 +32,18 @@ padding: 0 50px 0 50px;
   .next_arrow{
     @include slider_buttons(180deg);
   }
+  .prev_arrow:hover{
+    background-color: $pink_color
+  }
+  .next_arrow:hover{
+    background-color: $pink_color
+  }
   .slider_cards{
     @extend %flex_between;
     column-gap: 90px;
  overflow: hidden;
   }
+ 
   .pets_slider_card{
     @extend %flex_column;
     align-items: center;
@@ -46,6 +53,12 @@ padding: 0 50px 0 50px;
     justify-content: space-between;
     row-gap:30px;
     color:#545454;
+  cursor: url('../assets/icons/pointer_cursor.svg'), pointer;
+  }
+  .pets_slider_card:hover{
+    .slider_learrnMoreBtn{
+background-color: #F1CDB3;
+    }
   }
   .slider_petName{
     font-family: $font-Georgia;
@@ -67,12 +80,15 @@ letter-spacing: 0.06em;
   .get_rest{
     @include std_btn;
 margin-left: 1px;
-
+@include pink_buttons;
     border: none;
-    background-color: $pink_color;
+   
 
    color:#292929;
 
+  }
+  .get_rest:hover{
+    @include pink_buttons_active;
   }
 
   @media (max-width:1000px) {

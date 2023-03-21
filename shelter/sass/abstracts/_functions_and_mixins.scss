@@ -51,4 +51,10 @@
 
 
     
-  
+  @mixin pink_buttons() {
+  background-color: $pink_color;
+  transition: background 0.3s ease;
+}
+@mixin pink_buttons_active() {
+  background-color: $pink_active;
+}

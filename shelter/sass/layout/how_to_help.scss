@@ -1,7 +1,7 @@
 .how-to_help{
     @extend %flex_column;
     align-items: center;
-    margin-top: 80px;
+    margin-top: 82px;
     padding: 0 85px 100px 85px;
     div h2{
         @extend %headers;
@@ -19,7 +19,7 @@
     .icon_card{
         @extend %flex_column;
         align-items: center;
-        row-gap: 20px;
+        row-gap: 17px;
     
         img{
 width: 60px;
@@ -29,7 +29,7 @@ width: 60px;
             @extend %headers;
             font-size: 20px;
             line-height: 23px;
-            margin-top: 10px;
+            margin-top: 11px;
             letter-spacing: 0.06em;
             text-align: center;
         }

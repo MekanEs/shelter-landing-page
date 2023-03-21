@@ -16,7 +16,7 @@
     
 
    width: 100%;
-   margin: 60px auto;
+   margin: 30px auto;
     }
   .wrapper{
     @include wrapper_of_section;
@@ -53,6 +53,21 @@ line-height: 35.2px;
     column-gap: 36px;
  
   }
+
+  .nav_item{
+    text-decoration: none;
+text-underline-offset:2px;
+transition:text-underline-offset 0.3s linear ;
+  }
+  
+  .nav_item:hover{
+    text-decoration: underline #F1CDB3 solid 3px;
+    text-underline-offset:5px;
+  }
+  .nav_item:nth-child(1){
+    text-decoration: underline #F1CDB3 solid 3px;
+    text-underline-offset:5px;
+  }
   .start_text_img{
     @extend %flex_between;
     margin-top: 180px;
@@ -82,10 +97,14 @@ line-height: 35.2px;
       @include std_btn;
       margin-top: 41px;
       font-size: 17px;
-      background-color: $pink_color;
+    @include pink_buttons;
       border: none;
-      cursor: pointer;
+      cursor: url('../assets/icons/pointer_cursor.svg'), pointer;
     }
+
+    .make_friend_btn:hover{
+      @include pink_buttons_active}
+
   }
   .start_img{
    
@@ -110,7 +129,7 @@ line-height: 35.2px;
     .header {
       max-width: 768px;
       padding: 0 30px;
-      margin: 30px auto;
+      margin: 10px auto;
   }
   .start_text_img {
     margin-top: 0px;

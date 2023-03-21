@@ -3,9 +3,16 @@
     padding: 0;
     box-sizing: border-box;
     }
-    a{
-      cursor: pointer;
-    }
     button{
-      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    a:hover{
+      cursor: url('../assets/icons/pointer_cursor.svg'), pointer;
+    }
+    button:hover{
+      cursor: url('../assets/icons/pointer_cursor.svg'), pointer;
+    }
+    body{
+      cursor:url('../assets/icons/normal_cursor.svg'),default;
+      scroll-behavior: smooth;
     }
