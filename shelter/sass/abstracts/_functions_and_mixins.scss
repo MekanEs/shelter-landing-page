@@ -1,60 +1,94 @@
-@mixin wrapper_of_section{
-    max-width: 1280px;
-    padding: 0 40px;
-    margin: 0 auto;
-  }
-  
-  @mixin wrapper_of_section_tablet{
-    max-width: 768px;
-    padding: 0 30px;
-    margin: 0 auto;
-  }
-
-  %flex_column{
-    display: flex;
-    flex-direction: column;
-  }
-  %flex_between{
-    display: flex;
-    justify-content: space-between;
-  }
-  %headers{
-    font-family: "Georgia", normal;
-    font-size: 35px;
-    font-weight: 400;
-    letter-spacing: 2.1px;
-    line-height: 45px;
-  }
-  @mixin slider_buttons($deg) {
-    
-      @extend %flex_between;
-      transform: rotate($deg);
-      align-items: center;
-      padding: 21px 17px;
-  border: 2px solid $pink_color;
-  border-radius: 100px;
-  cursor: pointer;
-    margin-top: 1px;
-  }
-
-  @mixin std_btn{
-    font-family: $font-Georgia;
-    font-weight: 400;
-    line-height: 130%;
-    font-size: 17px;
-    padding: 15px 45px;
-    width: fit-content;
-    border-radius: 100px;
-    letter-spacing: 0.06em;
-  }
-
-
-
-    
-  @mixin pink_buttons() {
-  background-color: $pink_color;
-  transition: background 0.3s ease;
+@mixin flex_display($direction:row){
+  display: flex;
+  flex-direction: $direction;
 }
-@mixin pink_buttons_active() {
-  background-color: $pink_active;
+@mixin wrapper(){
+  max-width: 1280px;
+  padding: 0 40px 0 40px;
+  margin: 0 auto;
+}
+
+@mixin header_2(){
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 44px;
+  line-height: 57px;
+  color:$gray1_color;
+  margin: 0;
+}
+@mixin header_3(){
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 45px;
+  color:$gray1_color;
+  letter-spacing: 0.06em;
+  margin: 0;
+}
+@mixin header_4(){
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  color:$grayX_color;
+  letter-spacing: 0.06em;
+  margin: 0;
+}
+@mixin header_5(){
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 17px;
+  color:$grayX_color;
+  letter-spacing: 0.06em;
+}
+@mixin paragraph_1(){
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: $grayX_color;
+}
+@mixin paragraph_S(){
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #B2B2B2;
+}
+@mixin list(){
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 17px;
+  letter-spacing: 0.06em;
+  color: #000000;
+}
+@mixin button_txt{
+  font-family: 'Georgia';
+font-style: normal;
+font-weight: 400;
+font-size: 17px;
+line-height: 22px;
+letter-spacing: 0.06em;
+}
+
+@media (max-width<1000px) {
+  @mixin wrapper(){
+    max-width: 768px;
+    padding: 0 30px 0 30px;
+  }
+}
+@media (max-width<600px) {
+  @mixin wrapper(){
+    max-width: 320px;
+    padding: 0 20px 0 20px;
+  }
 }

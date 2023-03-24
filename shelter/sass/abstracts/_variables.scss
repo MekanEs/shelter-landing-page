@@ -1,10 +1,9 @@
-$font-Georgia:    'Georgia', normal;
-$font-Arial:    'Arial', normal;
-$start_screen_bg_color: #5B483A;
-$pink_color: #F1CDB3;
-$pink_active:#FDDCC4;
-
-a{
-    color: inherit;
-    text-decoration: none;
-}
+$default_cursor: url('../assets/icons/normal_cursor.svg'),default;
+$pointer_cursor:url('../assets/icons/pointer_cursor.svg'),default;
+$dark_pink:#F1CDB3;
+$bright_pink:#FDDCC4;
+$text_color: #292929;
+$inactive_color:#CDCDCD;
+$gray1_color: #545454;
+$grayX_color:#4C4C4C;
+$background_gray:#F6F6F6;

@@ -1,110 +1,85 @@
-
-.our_friends{
-    background-color: #F6F6F6;
-  }
-  .our_friends_content{
-    @extend %flex_column;
-    align-items: center;
-    justify-content: space-around;
+.pets{
+    background-color: $background_gray;
+    padding: 80px 0 100px 0;
+}
+.pets_content{
+    @include flex_display(column);
     row-gap: 60px;
-    padding-top: 80px;
-    padding-bottom: 99px;
-  }
-  .friends_h_txt{
-    @extend %headers;
-
+    align-items: center
+}
+.pets_heading{
+    @include header_3;
+    white-space: break-spaces;
     text-align: center;
-padding: 0 50px 0 50px;
-    margin-left: 2px;;
-    white-space: pre-line;
- 
-  }
-  .pet_slider{
-    @extend %flex_between;
-    align-items: center;
-    width: 100%;
-    column-gap: 55px;
-  }
+    color: $gray1_color;
 
-  .prev_arrow{
-@include slider_buttons(0deg);
-  }
-  .next_arrow{
-    @include slider_buttons(180deg);
-  }
-  .prev_arrow:hover{
-    background-color: $pink_color
-  }
-  .next_arrow:hover{
-    background-color: $pink_color
-  }
-  .slider_cards{
-    @extend %flex_between;
+}
+.pets_slider_container{
+    @include flex_display;
+    column-gap: 53px;
+    align-items: center;
+}
+
+.prev_btn{
+
+}
+.next_btn{
+transform: rotate(180deg);
+}
+.slider_btn{
+    border: 2px solid $dark_pink;
+    border-radius: 100px;
+    padding: 21px 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slider_btn:hover{
+background-color: $dark_pink;
+}
+
+.slider{
+    display: flex;
     column-gap: 90px;
- overflow: hidden;
-  }
- 
-  .pets_slider_card{
-    @extend %flex_column;
+}
+.slider_card{
+    @include flex_display(column);
     align-items: center;
-    width: fit-content;
-    background-color:#fff;
-    border-radius: 15px;
-    justify-content: space-between;
-    row-gap:30px;
-    color:#545454;
-  cursor: url('../assets/icons/pointer_cursor.svg'), pointer;
-  }
-  .pets_slider_card:hover{
-    .slider_learrnMoreBtn{
-background-color: #F1CDB3;
-    }
-  }
-  .slider_petName{
-    font-family: $font-Georgia;
-
-font-size: 20px;
-letter-spacing: 0.06em;
-
-  }
-  .slider_learrnMoreBtn{
-   @include std_btn;
-  
-   border: 2px solid #F1CDB3;
-   padding: 13px 43px;
-   background-color: #fff;
-   //margin-left: 2px;
-   margin-bottom: 30px;
-   color: #545454;
-  }
-  .get_rest{
-    @include std_btn;
-margin-left: 1px;
-@include pink_buttons;
+    row-gap: 30px;
+    border-radius: 9px;
+    background-color: #FFF;
+    padding-bottom: 30px;
     border: none;
-   
+ 
+}
+.slider_card:hover{
+    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+}
+.pet_name{
+    @include header_4
+}
+.slider_card_btn{
+    @extend %border_button;
+    border: 2px solid $dark_pink;
+    
+    display: flex;
+flex:none;
+    @include button_txt;
+    background-color: inherit;
 
-   color:#292929;
+}
+.slider_card_btn:hover{
+    background-color: $bright_pink;
 
-  }
-  .get_rest:hover{
-    @include pink_buttons_active;
-  }
+}
 
-  @media (max-width:1000px) {
-    .friends_h_txt{
-  padding: 0 20px 0 20px;
-
-
-
-      white-space: pre-line;
-
-    }
-    .pet_slider {
-      column-gap: 12px;
-    }
-    .slider_cards {
-      column-gap: 40px;
-
-    }
-  }
+.pets_primary_btn{
+    @extend %button;
+    @include button_txt;
+    background-color: $dark_pink;
+    border: none;
+}
+.pets_primary_btn:hover{
+    background-color:$bright_pink;
+ 
+}

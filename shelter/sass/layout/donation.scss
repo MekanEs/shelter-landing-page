@@ -1,64 +1,51 @@
-.Donation{
-    background: #F6F6F6;
-}
-
-.Donation_content{
-    @extend %flex_between;
-    padding: 95px 160px 100px 144px;
-    column-gap: 30px;
-
+.donation{
+    background-color: $background_gray;
 }
 .donation_content{
-    @extend %flex_column;
-    
-    h2{
-        @extend %headers;
-    
-        white-space: break-spaces;
-        line-height: 23px;
-margin-bottom: 30px;
-    
-    }
-    .h{
-        
-        font-size: 15px;
-        letter-spacing: 0.1em;
-        margin-bottom: 20px;
-    }
+    @include flex_display;
+    column-gap: 30px;
+    padding: 80px 143px 100px 143px;
 }
-.card_input_container{
-   
-    border: none;
-border-radius: 10px;
-    background-color: $pink_color;
+.donation_img{
     display: flex;
-    padding: 0 15px;
-    margin-right: 12px;
-    column-gap: 16px;
+    align-items: center;
+    img{
+        display: block;
+    }
 }
-.card_input{
-  background-color: transparent;
-    background-image: url('../../assets/credit-card.svg');
-    background-repeat: no-repeat;
-    line-height: 40px;
-    border: none;
-width: 100%;
-    font-family: 'Georgia';
-font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: 42px;
-letter-spacing: 0.06em;
+.donation_text{
+    @include flex_display(column);
+    row-gap: 20px;
+}
+.donation_heading{
+    @include header_3;
+    white-space: break-spaces;
 
 }
-.card_input:focus{
-    outline: none;
+.donation_bankName{
+    @include header_5;
 }
-.undercard_txt{
-    margin-top: 20px;
-    font-family: 'Arial';
-font-style: italic;
-font-weight: 400;
-font-size: 12px;
-line-height: 18px;
+
+.card_data_container{
+background-color: $dark_pink;
+@include flex_display;
+padding: 9px 15px 7px 15px;
+column-gap: 15px;
+border-radius: 9px;
+width: 92%;
+}
+.card_img{
+
+}
+.card_text{
+    @include header_4;
+    background-color: inherit;
+border:none;
+width: 100%;
+outline:none;
+}
+
+
+.donation_subCard{
+    @include paragraph_S;
 }
