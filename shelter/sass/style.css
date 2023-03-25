@@ -387,13 +387,18 @@ li {
   align-items: center;
   row-gap: 30px;
   border-radius: 9px;
-  background-color: #FFF;
+  background-color: #FAFAFA;
   padding-bottom: 30px;
   border: none;
 }
 
 .slider_card:hover {
+  cursor: url("../assets/icons/pointer_cursor.svg"), default;
   box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+  background-color: #FFF;
+}
+.slider_card:hover .slider_card_btn {
+  background-color: #FDDCC4;
 }
 
 .pet_name {
@@ -418,10 +423,6 @@ li {
   line-height: 22px;
   letter-spacing: 0.06em;
   background-color: inherit;
-}
-
-.slider_card_btn:hover {
-  background-color: #FDDCC4;
 }
 
 .pets_primary_btn {
