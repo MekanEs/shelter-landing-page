@@ -33,9 +33,11 @@ transform: rotate(180deg);
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: inherit;
 }
 .slider_btn:hover{
-background-color: $dark_pink;
+    border: 2px solid $bright_pink;
+background-color: $bright_pink;
 }
 
 .slider{
@@ -66,7 +68,7 @@ background-color: $dark_pink;
 }
 .slider_card_btn{
     @extend %border_button;
-    border: 2px solid $dark_pink;
+    border: 2px solid $bright_pink;
     
     display: flex;
 flex:none;

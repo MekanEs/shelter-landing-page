@@ -374,10 +374,12 @@ li {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: inherit;
 }
 
 .slider_btn:hover {
-  background-color: #F1CDB3;
+  border: 2px solid #FDDCC4;
+  background-color: #FDDCC4;
 }
 
 .slider {
@@ -417,7 +419,7 @@ li {
 }
 
 .slider_card_btn {
-  border: 2px solid #F1CDB3;
+  border: 2px solid #FDDCC4;
   display: flex;
   flex: none;
   font-family: "Georgia";
@@ -772,6 +774,7 @@ li {
 }
 
 .page_btn:hover {
+  border: 2px solid #FDDCC4;
   background-color: #FDDCC4;
 }
 
