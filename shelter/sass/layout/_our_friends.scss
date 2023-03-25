@@ -1,0 +1,95 @@
+.pets{
+    background-color: $background_gray;
+    padding: 80px 0 100px 0;
+}
+.pets_content{
+    @include flex_display(column);
+    row-gap: 60px;
+    align-items: center
+}
+.pets_heading{
+    @include header_3;
+    white-space: break-spaces;
+    text-align: center;
+    color: $gray1_color;
+
+}
+.pets_slider_container{
+    @include flex_display;
+    column-gap: 53px;
+    align-items: center;
+}
+
+.prev_btn{
+
+}
+.next_btn{
+transform: rotate(180deg);
+}
+.slider_btn{
+    border: 2px solid $dark_pink;
+    border-radius: 100px;
+    padding: 21px 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slider_btn:hover{
+background-color: $dark_pink;
+}
+
+.slider{
+    display: flex;
+    column-gap: 90px;
+}
+.slider_card{
+    @include flex_display(column);
+    align-items: center;
+    row-gap: 30px;
+    border-radius: 9px;
+    background-color: #FFF;
+    padding-bottom: 30px;
+    border: none;
+ 
+}
+.slider_card:hover{
+    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+}
+.pet_name{
+    @include header_4
+}
+.slider_card_btn{
+    @extend %border_button;
+    border: 2px solid $dark_pink;
+    
+    display: flex;
+flex:none;
+    @include button_txt;
+    background-color: inherit;
+
+}
+.slider_card_btn:hover{
+    background-color: $bright_pink;
+
+}
+
+.pets_primary_btn{
+ border-radius: 100px;
+    button{
+
+   
+    @extend %button;
+  
+        @include button_txt;
+ 
+
+    background-color: $dark_pink;
+    border: none; }
+}
+.pets_primary_btn:hover{
+    button{
+        background-color:$bright_pink;
+    }
+   
+ 
+}

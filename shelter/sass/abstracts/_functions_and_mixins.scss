@@ -1,0 +1,94 @@
+@mixin flex_display($direction:row){
+  display: flex;
+  flex-direction: $direction;
+}
+@mixin wrapper(){
+  max-width: 1280px;
+  padding: 0 40px 0 40px;
+  margin: 0 auto;
+}
+
+@mixin header_2(){
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 44px;
+  line-height: 57px;
+  color:$gray1_color;
+  margin: 0;
+}
+@mixin header_3(){
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 45px;
+  color:$gray1_color;
+  letter-spacing: 0.06em;
+  margin: 0;
+}
+@mixin header_4(){
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  color:$grayX_color;
+  letter-spacing: 0.06em;
+  margin: 0;
+}
+@mixin header_5(){
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 17px;
+  color:$grayX_color;
+  letter-spacing: 0.06em;
+}
+@mixin paragraph_1(){
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: $grayX_color;
+}
+@mixin paragraph_S(){
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #B2B2B2;
+}
+@mixin list(){
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 17px;
+  letter-spacing: 0.06em;
+  color: #000000;
+}
+@mixin button_txt{
+  font-family: 'Georgia';
+font-style: normal;
+font-weight: 400;
+font-size: 17px;
+line-height: 22px;
+letter-spacing: 0.06em;
+}
+
+@media (max-width<1000px) {
+  @mixin wrapper(){
+    max-width: 768px;
+    padding: 0 30px 0 30px;
+  }
+}
+@media (max-width<600px) {
+  @mixin wrapper(){
+    max-width: 320px;
+    padding: 0 20px 0 20px;
+  }
+}

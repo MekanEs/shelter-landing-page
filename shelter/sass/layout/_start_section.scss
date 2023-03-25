@@ -1,0 +1,113 @@
+.header_content{
+  @include flex_display;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.logo{
+ 
+}
+.logo_link{
+  cursor: $pointer_cursor;
+  @include flex_display(column);
+  align-items: center
+}
+.logo_title{
+  @include header_3;
+  margin: 0;
+  font-size: 32px;
+  line-height: 35px;
+  color: $dark_pink;
+  margin-bottom: 10px;
+letter-spacing: 0.06em;
+}
+.logo_sub{
+  @include paragraph_1;
+  color: #FFF;
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+  padding-left: 3px;
+}
+.nav_ul{
+  @include flex_display;
+  justify-content: space-between;
+  column-gap: 36px;
+}
+.nav_item{
+  padding: 16px 0 20px 0;
+  text-underline-offset: 0;
+  transition: text-underline-offset 0.2s ease;
+  text-shadow: none;
+}
+.nav_item:hover{
+  text-decoration: underline $dark_pink 3px solid;
+  text-underline-offset: 8px;
+  a{
+    text-shadow: none;
+  }
+ 
+}
+.nav_item:nth-child(1){
+  text-decoration: underline $dark_pink 3px solid;
+  text-underline-offset: 8px;
+  text-shadow: none;
+}
+
+.nav_link{
+  font-family: 'Arial';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 24px;
+color: $inactive_color;
+}
+
+
+
+
+
+
+
+//Start screen
+
+.start_screen_content{
+  @include flex_display;
+  justify-content: space-between;
+  margin-top: 90px;
+}
+
+.start_img{
+  display: block;
+  img{
+    display: block
+  }
+}
+.start_text{
+  @include flex_display(column);
+row-gap: 42px;
+margin-top: 163px;
+
+}
+.start_heading{
+  @include header_2;
+  color: #FFF;
+  width: 70%;
+}
+.start_subheading{
+  @include paragraph_1;
+  width: 92%;
+  color: $inactive_color;
+}
+
+.start_button{
+  button{@extend %button;
+  background-color: $dark_pink;
+  border: none;
+
+  @include button_txt;
+
+}
+button:hover{
+  background-color: $bright_pink;
+}
+}

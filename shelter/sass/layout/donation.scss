@@ -1,0 +1,51 @@
+.donation{
+    background-color: $background_gray;
+}
+.donation_content{
+    @include flex_display;
+    column-gap: 30px;
+    padding: 80px 143px 100px 143px;
+}
+.donation_img{
+    display: flex;
+    align-items: center;
+    img{
+        display: block;
+    }
+}
+.donation_text{
+    @include flex_display(column);
+    row-gap: 20px;
+}
+.donation_heading{
+    @include header_3;
+    white-space: break-spaces;
+
+}
+.donation_bankName{
+    @include header_5;
+}
+
+.card_data_container{
+background-color: $dark_pink;
+@include flex_display;
+padding: 9px 15px 7px 15px;
+column-gap: 15px;
+border-radius: 9px;
+width: 92%;
+}
+.card_img{
+
+}
+.card_text{
+    @include header_4;
+    background-color: inherit;
+border:none;
+width: 100%;
+outline:none;
+}
+
+
+.donation_subCard{
+    @include paragraph_S;
+}

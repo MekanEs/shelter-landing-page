@@ -1,0 +1,28 @@
+.about{
+    background-color: #FFF;
+}
+.about_content{
+    padding: 80px 175px 100px 175px;
+    @include flex_display;
+    justify-content: center;
+    column-gap: 120px;
+}
+.about_img{
+    img{
+        display: block;
+    }
+}
+.about_text{
+@include flex_display(column);
+row-gap: 25px;
+padding: 14px 0;
+}
+.about_heading{
+    @include header_3;
+    width: 80%
+
+}
+.about_subheading{
+@include paragraph_1;
+
+}

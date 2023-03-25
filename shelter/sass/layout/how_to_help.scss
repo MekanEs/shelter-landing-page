@@ -1,0 +1,37 @@
+.help{
+    background-color: #FFF;
+}
+.help_content{
+    @include flex_display(column);
+row-gap: 60px;
+padding: 80px 85px 100px 85px;
+}
+.help_heading{
+    @include header_3;
+    text-align: center;
+    white-space: break-spaces;
+
+}
+.help_icons{
+    @include flex_display;
+    flex-wrap: wrap;
+    column-gap: 120px;
+    row-gap: 55px;
+
+   justify-content: center;
+   
+
+}
+.icon_card{
+    @include flex_display(column);
+    width: fit-content;
+    row-gap: 30px;
+align-items: center;
+img{
+
+}
+}
+.icon_title{
+    @include header_4;
+    color: $gray1_color;
+}
