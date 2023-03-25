@@ -74,12 +74,22 @@ flex:none;
 }
 
 .pets_primary_btn{
+ border-radius: 100px;
+    button{
+
+   
     @extend %button;
-    @include button_txt;
+  
+        @include button_txt;
+ 
+
     background-color: $dark_pink;
-    border: none;
+    border: none; }
 }
 .pets_primary_btn:hover{
-    background-color:$bright_pink;
+    button{
+        background-color:$bright_pink;
+    }
+   
  
 }

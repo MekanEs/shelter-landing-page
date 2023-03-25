@@ -2,6 +2,7 @@
     @include flex_display;
     justify-content: space-between;
     margin-top: 40px;
+   
 }
 .upperCont{
     @include flex_display;
@@ -20,16 +21,25 @@
     @include header_3;
     margin-top: 16px;
     width: 90%;
+    color: #FFF;
 }
 .subh{
     @include flex_display;
     column-gap: 20px;
-    align-items: center
+    align-items: center;
+    color: $dark_pink
 }
 .subh2{
     @include flex_display;
     column-gap: 20px;
+    color: $dark_pink
 }
 .sub_txt{
-    @include header_4
+    @include header_4;
+    color: $dark_pink;
+}
+.footer_img{
+    img{
+        display: block;
+    }
 }

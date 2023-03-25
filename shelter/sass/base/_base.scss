@@ -3,11 +3,17 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+/*here is smooth scroll*/
+html{
+  scroll-behavior: smooth ;
+}
 a{
   text-decoration: none;
   color: #000000;
   cursor: $pointer_cursor;
+}
+a:hover{
+  text-shadow: #FFF 1px 0 0.5px;
 }
 button{
   cursor: $pointer_cursor; 
@@ -23,11 +29,15 @@ button{
   border-radius: 100px;
  font-size: 17px;
 }
-
 body{
+
+
+}
+.body{
   background:url('../assets/noise_transparent@2x.png'), 
   radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
   cursor: $default_cursor;
+
 }
 li{
   list-style: none;
