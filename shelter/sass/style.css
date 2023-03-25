@@ -774,6 +774,7 @@ li {
 }
 
 .page_btn:hover {
+  border: 2px solid #FDDCC4;
   background-color: #FDDCC4;
 }
 
