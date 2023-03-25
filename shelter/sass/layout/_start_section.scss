@@ -38,6 +38,7 @@ letter-spacing: 0.06em;
   text-underline-offset: 0;
   transition: text-underline-offset 0.2s ease;
   text-shadow: none;
+  
 }
 .nav_item:hover{
 
@@ -50,7 +51,7 @@ letter-spacing: 0.06em;
 }
 .nav_item:nth-child(1){
   a{
- 
+    color:#FAFAFA;
     text-decoration: underline $dark_pink 3px solid;
   }
   text-decoration: underline $dark_pink 3px solid;

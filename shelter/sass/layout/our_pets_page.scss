@@ -21,11 +21,19 @@
     }
   }
   .nav_item1:hover{
-    text-decoration: underline $dark_pink 3px solid;
+    a{
+      text-shadow: none;
+      text-decoration: underline $dark_pink 3px solid;
+    }
+
     text-underline-offset: 8px;
   }
   .nav_item1:nth-child(2){
-    text-decoration: underline $dark_pink 3px solid;
+    a{
+      color:$text_color;
+      text-decoration: underline $dark_pink 3px solid;
+    }
+  
     text-underline-offset: 8px;
   }
   .pets_logoUpper{
