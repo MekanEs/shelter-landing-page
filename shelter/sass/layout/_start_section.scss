@@ -80,18 +80,36 @@ color: $inactive_color;
   @include flex_display;
   justify-content: space-between;
   margin-top: 90px;
+  @media (max-width:1010px) {
+  flex-direction: column;
+  margin-top: 60px;
+  }
 }
 
 .start_img{
   display: block;
+
+  @media (max-width:1010px) {
+width: 569px;
+align-self: flex-end;
+  }
   img{
-    display: block
+
+    display: block;
+    @media (max-width:1010px) {
+width:100%;
+    }
   }
 }
 .start_text{
   @include flex_display(column);
 row-gap: 42px;
 margin-top: 163px;
+@media (max-width:1010px) {
+  margin-top: 0;
+  padding: 0 124px;
+  margin-bottom: 100px;
+}
 
 }
 .start_heading{
@@ -103,15 +121,21 @@ margin-top: 163px;
   @include paragraph_1;
   width: 92%;
   color: $inactive_color;
+  @media (max-width:1010px) {
+    width: 100%;
+  }
 }
 
 .start_button{
+  @media (max-width:1010px) {
+    align-self: center;
+      }
   button{@extend %button;
   background-color: $dark_pink;
   border: none;
 
   @include button_txt;
-
+  
 }
 button:hover{
   background-color: $bright_pink;
