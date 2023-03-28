@@ -29,7 +29,12 @@ button{
   border-radius: 100px;
  font-size: 17px;
 }
+.inactive_link{
 
+}
+.inactive_link:hover{
+  cursor: $default_cursor;
+}
 body{
 
 

@@ -36,6 +36,10 @@ button {
   font-size: 17px;
 }
 
+.inactive_link:hover {
+  cursor: url("../assets/icons/normal_cursor.svg"), default;
+}
+
 .body {
   background: url("../assets/noise_transparent@2x.png"), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
   cursor: url("../assets/icons/normal_cursor.svg"), default;
@@ -823,6 +827,10 @@ li {
   margin-top: 0;
   padding-top: 40px;
   background: url("../assets/noise_transparent@2x.png"), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
+}
+
+.inactive_link:hover {
+  cursor: url("../assets/icons/normal_cursor.svg"), default;
 }
 
 /*# sourceMappingURL=style.css.map */
