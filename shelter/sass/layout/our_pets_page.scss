@@ -109,3 +109,10 @@ column-gap: 0;
     background:url('../assets/noise_transparent@2x.png'), 
     radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
 }
+
+.inactive_link{
+
+}
+.inactive_link:hover{
+  cursor: $default_cursor;
+}
