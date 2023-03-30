@@ -18,11 +18,13 @@
     @include flex_display;
     column-gap: 53px;
     align-items: center;
+    width: 100%;
+    @media (max-width:1010px) {
+        column-gap: 12px;
+          }
 }
 
-.prev_btn{
 
-}
 .next_btn{
 transform: rotate(180deg);
 }
@@ -42,7 +44,12 @@ background-color: $bright_pink;
 
 .slider{
     display: flex;
-    column-gap: 90px;
+   column-gap: 90px;
+   overflow: hidden;
+
+   @media (max-width:1010px) {
+    column-gap: 40px;
+      }
 }
 .slider_card{
     @include flex_display(column);

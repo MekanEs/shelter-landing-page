@@ -6,10 +6,19 @@
     @include flex_display;
     justify-content: center;
     column-gap: 120px;
+    @media (max-width:1010px) {
+flex-direction: column-reverse;
+padding: 67px 145px 100px 140px;
+row-gap: 65px;
+          }
 }
 .about_img{
     img{
         display: block;
+    }
+    @media (max-width:1010px) {
+display: flex;
+justify-content: center;
     }
 }
 .about_text{

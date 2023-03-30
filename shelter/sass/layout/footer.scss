@@ -2,16 +2,29 @@
     @include flex_display;
     justify-content: space-between;
     margin-top: 40px;
+
+    @media (max-width:1010px) {
+flex-direction: column;
+margin-top: 15px;
+padding: 0 35px;
+row-gap: 60px;
+    }
    
 }
 .upperCont{
     @include flex_display;
     width: 64%;
     column-gap: 115px;
+
+    @media (max-width:1010px) {
+        width: 100%;
+        column-gap: 45px;
+    }
 }
 .container{
     @include flex_display(column);
     row-gap: 40px;
+ 
 }
 .container2{
     @include flex_display(column);
@@ -22,6 +35,10 @@
     margin-top: 16px;
     width: 90%;
     color: #FFF;
+
+    @media (max-width:1010px) {
+        width: 100%;
+    }
 }
 .subh{
     @include flex_display;
@@ -41,5 +58,10 @@
 .footer_img{
     img{
         display: block;
+    }
+
+    @media (max-width:1010px) {
+display: flex;
+justify-content: center;
     }
 }

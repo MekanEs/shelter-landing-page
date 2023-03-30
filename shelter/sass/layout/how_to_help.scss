@@ -5,6 +5,10 @@
     @include flex_display(column);
 row-gap: 60px;
 padding: 80px 85px 100px 85px;
+
+@media (max-width:1010px) {
+    padding: 80px 39px 100px 39px;
+      }
 }
 .help_heading{
     @include header_3;
@@ -19,7 +23,10 @@ padding: 80px 85px 100px 85px;
     row-gap: 55px;
 
    justify-content: center;
-   
+   @media (max-width:1010px) {
+    justify-content: space-between;
+    column-gap: 0;
+   }
 
 }
 .icon_card{
@@ -27,6 +34,11 @@ padding: 80px 85px 100px 85px;
     width: fit-content;
     row-gap: 30px;
 align-items: center;
+
+@media (max-width:1010px) {
+    width: 170px;
+
+}
 img{
 
 }
