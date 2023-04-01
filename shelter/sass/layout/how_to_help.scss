@@ -5,12 +5,24 @@
     @include flex_display(column);
 row-gap: 60px;
 padding: 80px 85px 100px 85px;
+
+@media (max-width:1010px) {
+    padding: 80px 39px 100px 39px;
+      }
+      @media (max-width:700px) {
+        padding: 40px 5px 40px 5px;
+        align-items: center;
+        row-gap: 42px;
+      }
 }
 .help_heading{
     @include header_3;
     text-align: center;
     white-space: break-spaces;
-
+    @media (max-width:700px) {
+@include header_mobile;
+width: fit-content;
+    }
 }
 .help_icons{
     @include flex_display;
@@ -19,7 +31,14 @@ padding: 80px 85px 100px 85px;
     row-gap: 55px;
 
    justify-content: center;
-   
+   @media (max-width:1010px) {
+    justify-content: space-between;
+    column-gap: 0;
+   }
+   @media (max-width:700px) {
+
+    row-gap: 27px;
+   }
 
 }
 .icon_card{
@@ -27,6 +46,18 @@ padding: 80px 85px 100px 85px;
     width: fit-content;
     row-gap: 30px;
 align-items: center;
+
+@media (max-width:1010px) {
+    width: 170px;
+
+}
+@media (max-width:700px) {
+    width: 130px;
+    row-gap: 17px;
+    img{
+        width: 50px;
+    }
+}
 img{
 
 }
@@ -34,4 +65,9 @@ img{
 .icon_title{
     @include header_4;
     color: $gray1_color;
+    @media (max-width:700px) {
+@include header_4;
+font-size: 15px;
+width: fit-content;
+    }
 }

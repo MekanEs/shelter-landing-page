@@ -1,28 +1,50 @@
 .pets{
     background-color: $background_gray;
     padding: 80px 0 100px 0;
+    @media(max-width: 700px){
+        padding: 0;
+    }
 }
 .pets_content{
     @include flex_display(column);
     row-gap: 60px;
-    align-items: center
+    align-items: center;
+    @media(max-width: 700px){
+        padding: 43px 5px;
+        row-gap: 42px;
+        display: flex;
+        align-self: center;
+    }
 }
 .pets_heading{
     @include header_3;
     white-space: break-spaces;
     text-align: center;
     color: $gray1_color;
+    @media(max-width: 700px){
+@include header_mobile;
+width: 100%;
+    }
 
 }
 .pets_slider_container{
     @include flex_display;
     column-gap: 53px;
     align-items: center;
+    width: 100%;
+    @media (max-width:1110px) {
+        column-gap: 12px;
+          }
+
+          @media(max-width: 700px){
+            flex-wrap: wrap;
+    justify-content: space-evenly;
+    row-gap: 20px;
+    column-gap: 26px;
+        }
 }
 
-.prev_btn{
 
-}
 .next_btn{
 transform: rotate(180deg);
 }
@@ -42,7 +64,24 @@ background-color: $bright_pink;
 
 .slider{
     display: flex;
-    column-gap: 90px;
+   column-gap: 90px;
+   overflow: hidden;
+
+   @media (max-width:1210px) {
+    column-gap: 40px;
+   
+      }
+      @media(max-width: 700px){
+       order: -1;
+       padding-left: 10px;
+     }
+}
+     
+
+.desktop_slider{
+    @media(max-width: 700px){
+        display: none;
+     }
 }
 .slider_card{
     @include flex_display(column);
@@ -74,7 +113,7 @@ background-color: $bright_pink;
 flex:none;
     @include button_txt;
     background-color: inherit;
-
+  
 }
 
 
@@ -97,4 +136,13 @@ flex:none;
     }
    
  
+}
+
+.mobile_slider{
+    display: none;
+    @media(max-width: 700px){
+        display: flex;
+        justify-content: flex-start;
+        padding-left: 10px;
+     }
 }
