@@ -35,7 +35,9 @@ width: 100%;
     @media (max-width:1110px) {
         column-gap: 12px;
           }
-
+          @media(max-width: 760px){
+            column-gap: 2px;
+          }
           @media(max-width: 700px){
             flex-wrap: wrap;
     justify-content: space-evenly;
@@ -71,12 +73,23 @@ background-color: $bright_pink;
     column-gap: 40px;
    
       }
+      @media(max-width: 760px){
+        column-gap: 20px;
+      }
+
       @media(max-width: 700px){
        order: -1;
        padding-left: 10px;
      }
 }
-     
+.slider_main {
+    @media(max-width: 760px){
+        .slider_card:nth-child(3){
+            display: none;
+                  }
+
+    }
+} 
 
 .desktop_slider{
     @media(max-width: 700px){
