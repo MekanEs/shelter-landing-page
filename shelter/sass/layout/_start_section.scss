@@ -69,14 +69,14 @@ line-height: 24px;
 color: $inactive_color;
 }
 .nav_menu{
-  @media (max-width:700px) {
+  @media (max-width:750px) {
 display: none;
   }
 }
 .burger_nav{
   display: none;
 
-  @media (max-width:700px) {
+  @media (max-width:750px) {
     display: flex;
    
   }
