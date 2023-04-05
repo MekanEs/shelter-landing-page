@@ -99,6 +99,12 @@ let Html = document.querySelector('html')
 let modalWindow = document.querySelector('.modal')
 let modal_petImg = document.querySelector('.modal_petImg')
 let modal_pets_petImg = document.querySelector('.modal_pets_petImg')
+let modal_txt_content = document.querySelector('.modal_txt')
+let modal_header2 = document.querySelector('.modal_header2')
+let modal_header3 =document.querySelector('.modal_header3')
+let modal_info = document.querySelector('.modal_info')
+let modal_list=document.querySelector('.modal_list')
+let isPets = document.querySelector('.pets_body')
 let fillModal = (el)=>{
     let res 
 infoArr.reduce((acc,el1)=>{
@@ -109,25 +115,43 @@ infoArr.reduce((acc,el1)=>{
    return res
 }
 cardArr.forEach((el)=>{
-    return el.addEventListener('click',()=>{
-        console.log(1)
+    return el.addEventListener('click',(e)=>{
+      let innerTxtCnt = '<h2>`${petInfo.name}`</h2>'
+              //console.log(1)
         popUp.classList.remove('inactive_popup')
         Html.classList.add('noscroll')
         let petInfo = fillModal(el)
-        console.log(petInfo)
+        //console.log(petInfo)
+        modal_header2.append(`${petInfo.name}`)
+        modal_header3.append(`${petInfo.type} - ${petInfo.breed}`)
+        modal_info.append(`${petInfo.description}`)
+        modal_list.innerHTML =`<li><span class='list_h'>Age: </span><span>${petInfo.age}</span></li>
+        <li><span class='list_h'>Inoculations: </span><span>${petInfo.inoculations.join(', ')}</span></li>
+        <li><span class='list_h'>Diseases: </span><span>${petInfo.diseases.join(', ')}</span></li>
+        <li><span class='list_h'>Parasites: </span><span>${petInfo.parasites.join(', ')}</span></li>`
         modal_petImg.setAttribute('src',petInfo['img'])
-        modal_pets_petImg.setAttribute('src',`.${petInfo['img']}`)
+        if(isPets){
+          modal_pets_petImg.setAttribute('src',`.${petInfo['img']}`)
+        }
+      
     })
 })
+let closing = ()=>{
+  popUp.classList.add('inactive_popup')
+  Html.classList.remove('noscroll')
+  modal_header2.innerHTML =''
+  modal_header3.innerHTML =''
+  modal_info.innerHTML=''
+  modal_list.innerHTML =''
+}
 let closeBtn = document.querySelector('.close')
 closeBtn.addEventListener('click',()=>{
-    popUp.classList.add('inactive_popup')
-    Html.classList.remove('noscroll')
+    closing()
 })
 
 popUp.addEventListener('click',(e)=>{
-    if(e.target!==modalWindow){
-        popUp.classList.add('inactive_popup')
-        Html.classList.remove('noscroll')
+  console.log(modalWindow.childNodes)
+    if(e.target!==modalWindow&& e.target===popUp){
+       closing()
     }
 })
