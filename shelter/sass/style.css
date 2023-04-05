@@ -53,11 +53,11 @@ li {
 @media (max-width: 1110px) {
   .wrapper {
     max-width: 768px;
-    min-width: 768px;
+    min-width: 720px;
     padding: 0 30px 0 30px;
   }
 }
-@media (max-width: 720px) {
+@media (max-width: 700px) {
   .wrapper {
     max-width: 320px;
     min-width: 320px;
@@ -1317,7 +1317,7 @@ li {
 
 .popUp {
   z-index: 2;
-  position: relative;
+  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1326,7 +1326,6 @@ li {
   width: 100%;
   height: 100%;
   background-color: rgba(2, 2, 2, 0.5);
-  position: absolute;
 }
 
 .modalWindow {
@@ -1351,12 +1350,13 @@ li {
 }
 
 .close {
-  width: 100%;
+  width: fit-content;
   background-color: inherit;
   display: flex;
   justify-content: flex-end;
   border: none;
   opacity: 1;
+  align-self: flex-end;
 }
 .close .img_cont {
   width: 52px;
@@ -1376,23 +1376,171 @@ li {
   opacity: 1;
   width: 900px;
   height: 500px;
-  background-color: #FFF;
+  background: #FAFAFA;
+  border-radius: 9px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+  column-gap: 30px;
 }
 @media (max-width: 1100px) {
   .modal {
     width: 630px;
     height: 350px;
+    column-gap: 11px;
   }
 }
 @media (max-width: 700px) {
   .modal {
     width: 240px;
-    height: 341px;
+    height: fit-content;
+    column-gap: 0;
   }
 }
 
 .inactive_popup {
   display: none;
+}
+
+.noscroll {
+  overflow: hidden;
+}
+
+.list_h {
+  font-weight: 700;
+}
+
+.modal_txt {
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 45px;
+  color: #545454;
+  letter-spacing: 0.06em;
+  margin: 0;
+  padding: 50px 20px 88px 0;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #000;
+}
+@media (max-width: 1110px) {
+  .modal_txt {
+    padding: 10px 9px 37px 0;
+  }
+}
+@media (max-width: 700px) {
+  .modal_txt {
+    padding: 10px;
+  }
+}
+
+.modal_header2 {
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 45px;
+  color: #545454;
+  letter-spacing: 0.06em;
+  margin: 0;
+  color: #000;
+  padding-bottom: 10px;
+}
+@media (max-width: 700px) {
+  .modal_header2 {
+    margin: 0 auto;
+  }
+}
+
+.modal_header3 {
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  color: #4C4C4C;
+  letter-spacing: 0.06em;
+  margin: 0;
+  color: #000;
+}
+@media (max-width: 700px) {
+  .modal_header3 {
+    margin: 0 auto;
+  }
+}
+
+.modal_info {
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 17px;
+  color: #4C4C4C;
+  letter-spacing: 0.06em;
+  padding: 40px 0;
+  color: #000;
+}
+@media (max-width: 1150px) {
+  .modal_info {
+    padding: 20px 0;
+    font-size: 13px;
+    line-height: 14px;
+    letter-spacing: 0.06em;
+  }
+}
+@media (max-width: 700px) {
+  .modal_info {
+    text-align: justify;
+    padding: 20px 0 24px 0;
+  }
+}
+
+.modal_list {
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 17px;
+  color: #4C4C4C;
+  letter-spacing: 0.06em;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+@media (max-width: 1150px) {
+  .modal_list {
+    row-gap: 6px;
+  }
+}
+@media (max-width: 700px) {
+  .modal_list {
+    row-gap: 5px;
+  }
+}
+.modal_list li {
+  color: #F1CDB3;
+}
+.modal_list li span {
+  color: #000;
+}
+
+.modal_petImg {
+  border-radius: 9px 0px 0px 9px;
+  width: 500px;
+}
+@media (max-width: 1100px) {
+  .modal_petImg {
+    width: 350px;
+  }
+}
+@media (max-width: 700px) {
+  .modal_petImg {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
