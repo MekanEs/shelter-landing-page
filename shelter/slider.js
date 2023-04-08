@@ -72,42 +72,89 @@ fillArrWithIndexes(pastCards)
 fillArrWithIndexes(currentCards,pastCards)
 fillArrWithIndexes(nextCards,currentCards)
 
-const config = {  childList: true, subtree: true };
 
-const callback = (mutationList, observer) => {
-  console.log(mutationList)
-        feelModal()
-     
-      
-  }
 
-  const observer = new MutationObserver(callback)
-  observer.observe(sliderInside, config)
-
-let fillhtml = (pos=1000)=>{
+let fillhtml = (pos=1000,vis ='flex')=>{
+    
     currentCards.reduce((acc,el)=>{
      
         let cardToAppend = allCardsInHtml[el]
         cardToAppend.style['transform']=`translateX(${pos}px)`
+        cardToAppend.style['display']=`${vis}`
         sliderInside.append(cardToAppend)
     },0)
-console.log('fillHtml')
-}
-let deletehtml = (pos = 1000)=>{
-    console.log(sliderInside.children.length)
-for(let i=0;i<sliderInside.children.length;i++){
-    sliderInside.children[i].style['transform'] = `translateX(${pos}px)`
     
+
 }
-setTimeout(()=>sliderInside.innerHTML='',400)
-console.log('deleteHtml')
-}
-let translateCur = ()=>{
-    for(let i=0;i<sliderInside.children.length;i++){
-        sliderInside.children[i].style['transform'] = `translateX(0px)`
-        
+
+
+let fillhtmlStart = (pos=1000,vis ='flex')=>{
+    [...currentCards].reverse().forEach((el)=>{
+        let cardToAppend = allCardsInHtml[el]
+        cardToAppend.style['transform']=`translateX(${pos}px)`
+        cardToAppend.style['display']=`${vis}`
+        sliderInside.insertAdjacentElement("afterbegin",cardToAppend)
+  })
+       
+     
+     
+      
+    }
+   
+
+let translate =(pos)=>{
+   
+   sliderInside.style['transform']=`translateX(${pos}px)`
+    for(let i=sliderInside.children.length-3;i<sliderInside.children.length;i++){
+        sliderInside.children[i].style['display'] = 'flex'
+        sliderInside.children[i].classList.add('transition_None')
+    sliderInside.children[i].style['transform'] = `translateX(0px)`
     }
 }
+let translateStart =(pos)=>{
+   
+    sliderInside.style['transform']=`translateX(${pos}px)`
+     for(let i=0;i<sliderInside.children.length;i++){
+         sliderInside.children[i].style['display'] = 'flex'
+         sliderInside.children[i].classList.add('transition_None')
+     sliderInside.children[i].style['transform'] = `translateX(0px)`
+     }
+ }
+let deletehtml = (pos = 1080)=>{
+    sliderInside.classList.add('transition_None')
+    sliderInside.style['transform']=`translateX(0px)`
+
+for(let i=0;i<3;i++){
+    sliderInside.children[0].remove()
+}
+for(let i=0;i<3;i++){
+    sliderInside.children[i].classList.remove('transition_None')
+}
+setTimeout(()=>{
+    sliderInside.classList.remove('transition_None')
+},200)
+
+}
+let deletehtmlStart = (pos = 1080)=>{
+    sliderInside.classList.add('transition_None')
+    sliderInside.style['transform']=`translateX(0px)`
+
+for(let i=2;i<=sliderInside.children.length;i++){
+  
+    sliderInside.lastChild.remove()
+}
+for(let i=sliderInside.children.length-3;i<sliderInside.children.length;i++){
+    sliderInside.children[i].classList.remove('transition_None')
+}
+setTimeout(()=>{
+    sliderInside.classList.remove('transition_None')
+},200)
+
+}
+
+
+
+
 
 fillhtml(0)
 nextBtn.addEventListener('click',()=>{
@@ -117,13 +164,12 @@ nextBtn.addEventListener('click',()=>{
     pastCards = [...currentCards]
     currentCards = [...nextCards]
     nextCards = [...makeNew]
-    deletehtml(-1000)
-    setTimeout(() => {
-        fillhtml(2000) 
-    }, 405); 
-   setTimeout(() => {
-    translateCur()
-   }, 430);
+    fillhtml(1080,'none')
+    translate(-1080)
+ setTimeout(() => {
+        deletehtml()
+    }, 200);
+   feelModal()
 })
 
 prevBtn.addEventListener('click',()=>{
@@ -133,12 +179,11 @@ prevBtn.addEventListener('click',()=>{
     nextCards = [...currentCards]
     currentCards = [...pastCards]
     pastCards = [...makeNew]
- 
-    deletehtml(1000)
-    setTimeout(() => {
-        fillhtml(-2000) 
-    }, 405); 
-    setTimeout(() => {
-        translateCur()
-       }, 430);
+  
+    fillhtmlStart(-1080,'none')
+    translateStart(1080)
+ setTimeout(() => {
+    deletehtmlStart()
+    }, 200);
+    feelModal()
 })

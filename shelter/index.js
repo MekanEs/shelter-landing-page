@@ -132,10 +132,13 @@ cardArr.forEach((el)=>{
         popUp.classList.remove('inactive_popup')
         Html.classList.add('noscroll')
         let petInfo = fillModal(el)
-      
+        modal_header2.innerHTML = ''
         modal_header2.append(`${petInfo.name}`)
+        modal_header3.innerHTML = ''
         modal_header3.append(`${petInfo.type} - ${petInfo.breed}`)
+        modal_info.innerHTML = ''
         modal_info.append(`${petInfo.description}`)
+        modal_list.innerHTML =''
         modal_list.innerHTML =`<li><span class='list_h'>Age: </span><span>${petInfo.age}</span></li>
         <li><span class='list_h'>Inoculations: </span><span>${petInfo.inoculations.join(', ')}</span></li>
         <li><span class='list_h'>Diseases: </span><span>${petInfo.diseases.join(', ')}</span></li>

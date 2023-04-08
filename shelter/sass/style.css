@@ -625,6 +625,10 @@ li {
   overflow: hidden;
 }
 
+.transition_None {
+  transition: none !important;
+}
+
 @media (max-width: 700px) {
   .desktop_slider {
     display: none;
@@ -640,7 +644,7 @@ li {
   background-color: #FAFAFA;
   padding-bottom: 30px;
   border: none;
-  transition: all 0.4s linear;
+  transition: none;
 }
 
 .slider_card:hover {
