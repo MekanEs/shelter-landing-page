@@ -40,22 +40,27 @@ flex-direction: column;
                border: none;
                opacity: 1;
                align-self: flex-end;
-       .img_cont{
-width: 52px;
+               width: 52px;
 height: 52px;
 border-radius: 100px;
-border: 2px solid $dark_pink;
-display: flex;
 justify-content: center;
 align-items: center;
+border: 2px solid $dark_pink;
+display: flex;
+       .img_cont{
+
+
+
+
        }
       
 
-       .img_cont:hover{
+           }
+           
+       .close:hover{
         border:none;
         background-color: $bright_pink;
        }
-           }
            .modal{
             opacity: 1;
             width: 900px;
