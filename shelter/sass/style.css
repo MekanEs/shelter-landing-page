@@ -553,7 +553,6 @@ li {
   align-items: center;
   width: 100%;
   position: relative;
-  overflow: hidden;
 }
 @media (max-width: 1110px) {
   .pets_slider_container {
@@ -572,6 +571,10 @@ li {
     row-gap: 20px;
     column-gap: 26px;
   }
+}
+
+.pets_slider {
+  display: flex;
 }
 
 @media (max-width: 700px) {
@@ -1215,12 +1218,12 @@ li {
 
 @media (max-width: 1010px) {
   .pets_page_sliderCont {
-    padding: 0 64px 10px 64px;
+    padding: 0 10px 10px 10px;
   }
 }
 @media (max-width: 700px) {
   .pets_page_sliderCont {
-    padding: 10px 10px 13px 10px;
+    padding: 10px 0px 13px 0px;
   }
 }
 
@@ -1231,33 +1234,57 @@ li {
   column-gap: 0;
   padding: 0;
 }
+@media (max-width: 700px) {
+  .pets_slider {
+    width: 100%;
+  }
+}
 
-@media (max-width: 1010px) {
-  .slider_card:nth-child(7) {
-    display: none;
-  }
-  .slider_card:nth-child(8) {
-    display: none;
-  }
-}
-@media (max-width: 760px) {
-  .slider_card:nth-child(4) {
-    display: none;
-  }
-  .slider_card:nth-child(5) {
-    display: none;
-  }
-  .slider_card:nth-child(6) {
-    display: none;
-  }
-}
-.slider_card {
+/*@media(max-width: 1010px){
+      .slider_card1:nth-child(7){
+display: none;
+      }
+      .slider_card1:nth-child(8){
+        display: none;
+              }
+    }
+
+    @media(max-width: 760px){
+      .slider_card1:nth-child(4){
+        display: none;
+              }
+      .slider_card1:nth-child(5){
+display: none;
+      }
+      .slider_card1:nth-child(6){
+        display: none;
+              }
+    }*/
+.slider_card1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 30px;
+  border-radius: 9px;
+  background-color: #FAFAFA;
+  padding-bottom: 30px;
+  border: none;
+  transition: none;
   width: 270px;
 }
-.slider_card img {
+.slider_card1 img {
   width: inherit;
   border-top-right-radius: 9px;
   border-top-left-radius: 9px;
+}
+
+.slider_card1:hover {
+  cursor: url("../assets/icons/pointer_cursor.svg"), default;
+  box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+  background-color: #FFF;
+}
+.slider_card1:hover .slider_card_btn {
+  background-color: #FDDCC4;
 }
 
 .pagination {
@@ -1288,7 +1315,7 @@ li {
 }
 
 .prev_prev, .prev {
-  border: 2px solid #CDCDCD;
+  border: 2px solid #F1CDB3;
 }
 
 .curr {
@@ -1309,6 +1336,10 @@ li {
 .page_btn:hover {
   border: 2px solid #FDDCC4;
   background-color: #FDDCC4;
+}
+
+.disabled {
+  border: 2px solid #CDCDCD;
 }
 
 .pets_footer {

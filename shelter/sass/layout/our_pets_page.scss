@@ -71,10 +71,10 @@
   }
 .pets_page_sliderCont{
   @media(max-width: 1010px){
-    padding: 0 64px 10px 64px;
+    padding: 0 10px 10px 10px;
   }
   @media(max-width: 700px){
-    padding: 10px 10px 13px 10px;
+    padding: 10px 0px 13px 0px;
   }
 }
 
@@ -84,28 +84,39 @@ justify-content: space-between;
 row-gap: 30px;
 column-gap: 0;
 padding: 0;
+@media(max-width:700px){
+  width: 100%;
+}
   }
-    @media(max-width: 1010px){
-      .slider_card:nth-child(7){
+    /*@media(max-width: 1010px){
+      .slider_card1:nth-child(7){
 display: none;
       }
-      .slider_card:nth-child(8){
+      .slider_card1:nth-child(8){
         display: none;
               }
     }
 
     @media(max-width: 760px){
-      .slider_card:nth-child(4){
+      .slider_card1:nth-child(4){
         display: none;
               }
-      .slider_card:nth-child(5){
+      .slider_card1:nth-child(5){
 display: none;
       }
-      .slider_card:nth-child(6){
+      .slider_card1:nth-child(6){
         display: none;
               }
-    }
-  .slider_card{
+    }*/
+  .slider_card1{
+    @include flex_display(column);
+    align-items: center;
+    row-gap: 30px;
+    border-radius: 9px;
+    background-color: #FAFAFA;
+    padding-bottom: 30px;
+    border: none;
+    transition: none;
     width: 270px;
     img{
         width: inherit;
@@ -113,6 +124,15 @@ display: none;
         border-top-left-radius:9px;
     }
   }
+  .slider_card1:hover{
+    cursor: $pointer_cursor;
+    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+    background-color: #FFF;
+    .slider_card_btn{
+        background-color: $bright_pink;
+    
+    }
+}
 .pagination{
    @include header_4;
     @include flex_display;
@@ -134,7 +154,7 @@ display: none;
 }
 
 .prev_prev, .prev{
-    border: 2px solid  $inactive_color;
+    border: 2px solid  $dark_pink;
 }
 .curr{
     border:none;
@@ -150,10 +170,16 @@ display: none;
     align-items: center;
 }
 
+
 .page_btn:hover{
   border: 2px solid  $bright_pink;
     background-color: $bright_pink;
 }
+.disabled{
+ 
+  border: 2px solid  $inactive_color;
+}
+
 .pets_footer{
     margin-top: 0;
     padding-top: 40px;

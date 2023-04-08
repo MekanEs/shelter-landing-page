@@ -1,5 +1,5 @@
 import  {getPetsInfo}  from "./index.js";
-import {feelModal}  from "./index.js";
+import { feelModal } from "./index.js";
 let PetsInfo = [...getPetsInfo()]
 let sliderContainer = document.querySelector('.slider_main')
 let documentwidth = document.querySelector('body').offsetWidth
@@ -187,3 +187,4 @@ prevBtn.addEventListener('click',()=>{
     }, 200);
     feelModal()
 })
+feelModal()
