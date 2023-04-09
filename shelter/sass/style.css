@@ -219,6 +219,7 @@ li {
   row-gap: 40px;
   display: flex;
   flex-direction: column;
+  z-index: 2;
   width: 320px;
   height: 100%;
   align-items: center;
@@ -240,6 +241,7 @@ li {
 }
 
 .burger_window {
+  z-index: 1;
   transition: opacity 0.2s ease;
   opacity: 0;
   width: 100vw;
@@ -1409,6 +1411,10 @@ display: none;
 
 .inactive_link:hover {
   cursor: url("../assets/icons/normal_cursor.svg"), default;
+}
+
+.pets_burger {
+  background-color: #FAFAFA;
 }
 
 .popUp {

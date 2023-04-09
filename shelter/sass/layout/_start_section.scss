@@ -39,7 +39,7 @@ letter-spacing: 0.06em;
   padding-top: 248px;
  row-gap: 40px;
   @include flex_display(column);
-
+z-index: 2;
   width:320px;
   height: 100%;
   align-items: center;
@@ -61,6 +61,7 @@ line-height: 160%;
  right: 0;
 }
 .burger_window{
+  z-index: 1;
   transition: opacity 0.2s ease;
   opacity: 0;
   width: 100vw;
