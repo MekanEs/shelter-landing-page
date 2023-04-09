@@ -100,9 +100,9 @@ let infoArr = [
   export function getPetsInfo (){
   return infoArr
 }
-export function feelModal (){
-  console.log('fellModal')
-let cardArr = document.querySelectorAll('.slider_card')
+export function feelModal1 (){
+  console.log('feelModal1')
+let cardArr = document.querySelectorAll('.slider_card1')
 let popUp = document.querySelector('.popUp')
 let Html = document.querySelector('html')
 let modalWindow = document.querySelector('.modal')
