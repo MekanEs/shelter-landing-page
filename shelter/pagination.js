@@ -3,7 +3,7 @@ let container = document.querySelector('.pets_slider')
 
 feelModal1()
 let Pets = getPetsInfo()
-let putInfoToCard1 = (el,forward=0)=>{
+let putInfoToCard1 = (el)=>{
    
     const card = document.createElement('div')
    

@@ -129,7 +129,10 @@ display:none;
     padding-bottom: 30px;
     border: none;
     transition: none;
-
+img{
+    width: 270px;
+    border-radius: 9px 9px 0px 0px;
+}
 }
 
 .slider_card:hover{
