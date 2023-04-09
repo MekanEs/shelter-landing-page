@@ -101,7 +101,7 @@ let infoArr = [
   return infoArr
 }
 export function feelModal1 (){
-  console.log('feelModal1')
+ 
 let cardArr = document.querySelectorAll('.slider_card1')
 let popUp = document.querySelector('.popUp')
 let Html = document.querySelector('html')

@@ -55,7 +55,7 @@ for(let i=start; i<end;i++){
 }
 feelModal1()
 }
-console.log(PetsArr)
+
 let start = 0
 let end =8
 let step = 8
@@ -109,7 +109,7 @@ first.addEventListener('click',()=>{
 let curPage = document.querySelector('.curr')
 curPage.innerText = Math.round(end/(PetsArr.length/(pagesCount)))
 let disableBtns = (btn1,btn2,point)=>{
- console.log(start)
+
     if(start ===point){
         btn1.classList.add('disabled')
         btn1.setAttribute('disabled',true)
