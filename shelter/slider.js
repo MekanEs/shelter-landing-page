@@ -30,6 +30,7 @@ card.appendChild(button)
 
 return card
 }
+
 let CountOfvisibleCards 
 
 if(documentwidth>1110){

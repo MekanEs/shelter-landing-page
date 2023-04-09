@@ -40,12 +40,25 @@ while(arr.length<8){
 }
 return arr
         }
-        let PetsArr =[]
-       let petsList = ()=>{
-        while(PetsArr.length<8*6){
-PetsArr.push(...fillArrays())
-        }
-       }
+        let rand = (arr)=>{
+            let random = Math.round(Math.random())
+            if(random>1/2){
+              return [...arr].reverse()
+            }else{
+              return arr
+            }
+            }
+                    let PetsArr =[]
+                    let petsList = ()=>{
+                    let arr = fillArrays()
+                   
+            let first = arr.slice(0,3) 
+            let sec = arr.slice(3,6)
+            let last = arr.slice(-2) 
+            for(let i=0;i<6;i++){
+            let result = [...rand(first),...rand(sec),...rand(last)]
+             PetsArr.push(...result)
+            }}
        petsList()
    
 let fillContainer = (start=0,end=8)=>{
@@ -60,6 +73,7 @@ let start = 0
 let end =8
 let step = 8
 let pagesCount = PetsArr.length/step
+console.log(PetsArr.length,step)
 fillContainer(start,end)
 
 
@@ -144,45 +158,58 @@ if(window.innerWidth<1010&&curSize>1010){
 
 curSize = window.innerWidth
 removeAll()
-    start = 0
-    end =6
-    step = 6
-    pagesCount = PetsArr.length/step
- fillContainer(start,end)
+start = 0
+step = 6
+ 
+    end =start+step
 
+    pagesCount = PetsArr.length/step
+    curPage.innerText = end/step
+ fillContainer(start,end)
+ disableBtns(prev,first,0)
+ disableBtns(last,next,40)
 }else
 if(window.innerWidth>1010&&curSize<=1010){
 
     curSize = window.innerWidth
     removeAll()
-        start = 0
-        end =8
-        step = 8
-        pagesCount = PetsArr.length/step
+    step = 8
+ start =0
+    end =start+step
+
+    pagesCount = PetsArr.length/step
+    curPage.innerText = end/step
      fillContainer(start,end)
-    
+     disableBtns(prev,first,0)
+     disableBtns(last,next,40)
     }else
     if(window.innerWidth<700&&curSize>700){
 
         curSize = window.innerWidth
         removeAll()
-            start = 0
-            end =3
-            step = 3
-            pagesCount = PetsArr.length/step
+        step = 3
+        start =0
+        end =start+step
+    
+        pagesCount = PetsArr.length/step
+        curPage.innerText = end/step
          fillContainer(start,end)
-        
+         disableBtns(prev,first,0)
+         disableBtns(last,next,40)
         }else
         if(window.innerWidth>700&&curSize<=700){
         
             curSize = window.innerWidth
             removeAll()
-                start = 0
-                end =6
-                step = 6
-                pagesCount = PetsArr.length/step
+            step = 6
+            start =0
+            end =start+step
+        
+            pagesCount = PetsArr.length/step
+            curPage.innerText = end/step
              fillContainer(start,end)
-            
+             disableBtns(prev,first,0)
+             disableBtns(last,next,40)
             }
 
 })
